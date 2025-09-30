@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn Sorting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="brand">Learn <span>Sorting</span></h1>
+      <p class="tagline">Interactive visualizations for Bubble, Selection, Insertion, Merge & Quick sort — play with it!</p>
+    </div>
+  </header>
+  <main class="main">
+    <section class="controls">
+      <div class="wrap controls-row">
+        <div class="control-block">
+          <label for="sizeRange">Array size</label>
+          <input id="sizeRange" type="range" min="5" max="70" value="30">
+          <span id="sizeLabel">30</span>
+        </div>
+        <div class="control-block">
+          <label for="speedRange">Speed</label>
+          <input id="speedRange" type="range" min="1" max="100" value="50">
+          <span id="speedLabel">50</span>
+        </div>
+        <div class="control-block">
+          <label for="algoSelect">Algorithm</label>
+          <select id="algoSelect">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+          </select>
+        </div>
+        <div class="control-block buttons-block">
+          <button id="generateBtn" class="btn primary">Generate</button>
+          <button id="startBtn" class="btn accent">Start</button>
+          <button id="shuffleBtn" class="btn">Shuffle</button>
+          <button id="resetBtn" class="btn subtle">Reset</button>
+        </div>
+      </div>
+    </section>
+    <section class="visualization wrap">
+      <div id="barsContainer" class="bars-container" aria-live="polite"></div>
+    </section>
+    <section class="notes wrap">
+      <p>Tip: Use <strong>Generate</strong> to create a new array, adjust speed/size, then hit <strong>Start</strong>.</p>
+      <p class="small">Colors: <span class="legend-item"><span class="swatch current"></span>current</span> <span class="legend-item"><span class="swatch comparing"></span>comparing</span> <span class="legend-item"><span class="swatch sorted"></span>sorted</span></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
